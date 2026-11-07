@@ -2,17 +2,1040 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Privacy Policy – PFMS (Public Financial Management System)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    <meta name="description" content="Official Privacy Policy and Data Safety Disclosure for PFMS – Public Financial Management System Android Application developed by Anshil Technical." />
+    <meta name="theme-color" content="#003B78" />
+    <title>Privacy Policy | PFMS – Public Financial Management System</title>
     <style>
         :root {
             --navy-blue: #003B78;
             --secondary-blue: #0755A6;
-…
-        <div class="footer-pill">
-            App Developed for Public Service
+            --button-grad-start: #064A91;
+            --button-grad-end: #00336D;
+            --orange: #FF8500;
+            --accent-orange: #FF9D00;
+            --card-border-orange: #FF9900;
+            --pure-white: #FFFFFF;
+            --main-text: #101828;
+            --secondary-text: #505968;
+            --divider: #E5E7EB;
+            --light-gold-bg: #FFF8EB;
+            --light-blue-bg: #F0F6FF;
+            --surface-gray: #F3F4F6;
+            --verified-green: #0F766E;
+            --verified-green-bg: #ECFDF5;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--pure-white);
+            color: var(--main-text);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Subtle Fixed Ashoka Chakra Watermark in Background */
+        .watermark-chakra {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            width: 360px;
+            height: 360px;
+            transform: translate(-50%, -50%);
+            opacity: 0.035;
+            pointer-events: none;
+            z-index: 0;
+            animation: spinChakra 60s linear infinite;
+        }
+
+        @keyframes spinChakra {
+            from { transform: translate(-50%, -50%) rotate(0deg); }
+            to { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .watermark-chakra {
+                animation: none;
+            }
+        }
+
+        /* Top Hero Header */
+        .hero-header {
+            position: relative;
+            background: linear-gradient(135deg, var(--navy-blue) 0%, var(--secondary-blue) 60%, var(--button-grad-end) 100%);
+            color: var(--pure-white);
+            padding: 36px 20px 44px;
+            text-align: center;
+            overflow: hidden;
+            box-shadow: 0 8px 28px rgba(0, 59, 120, 0.18);
+            z-index: 1;
+        }
+
+        .hero-header::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, var(--orange), var(--accent-orange), var(--orange));
+        }
+
+        .hero-inner {
+            max-width: 880px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .brand-logo-circle {
+            width: 68px;
+            height: 68px;
+            margin: 0 auto 14px;
+            border-radius: 50%;
+            background: var(--pure-white);
+            border: 3px solid var(--orange);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+        }
+
+        .header-pill-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: linear-gradient(90deg, var(--orange), var(--accent-orange));
+            color: var(--pure-white);
+            font-size: 11.5px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            padding: 5px 16px;
+            border-radius: 50px;
+            margin-bottom: 12px;
+            box-shadow: 0 3px 10px rgba(255, 133, 0, 0.35);
+        }
+
+        .hero-header h1 {
+            font-size: 28px;
+            font-weight: 800;
+            letter-spacing: 0.2px;
+            margin-bottom: 6px;
+            line-height: 1.25;
+        }
+
+        .hero-header .subtitle {
+            font-size: 14.5px;
+            color: rgba(255, 255, 255, 0.92);
+            font-weight: 500;
+            max-width: 620px;
+            margin: 0 auto 16px;
+        }
+
+        .trust-strip {
+            display: inline-flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 4px;
+        }
+
+        .trust-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(255, 255, 255, 0.14);
+            border: 1px solid rgba(255, 255, 255, 0.28);
+            color: var(--pure-white);
+            padding: 5px 13px;
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        /* Main Content Container */
+        .container {
+            max-width: 880px;
+            margin: -22px auto 48px;
+            padding: 0 16px;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Metadata Bar Card */
+        .meta-banner {
+            background: var(--pure-white);
+            border: 1.8px solid var(--card-border-orange);
+            border-radius: 20px;
+            padding: 18px 22px;
+            margin-bottom: 22px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+            gap: 14px;
+            box-shadow: 0 10px 26px rgba(0, 59, 120, 0.08);
+        }
+
+        .meta-cell {
+            display: flex;
+            flex-direction: column;
+            border-left: 3px solid var(--orange);
+            padding-left: 12px;
+        }
+
+        .meta-label {
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            color: var(--secondary-text);
+        }
+
+        .meta-value {
+            font-size: 14px;
+            font-weight: 800;
+            color: var(--navy-blue);
+            margin-top: 2px;
+        }
+
+        /* Quick Summary Highlights Grid (4 Pillars) */
+        .highlights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+            gap: 14px;
+            margin-bottom: 24px;
+        }
+
+        .highlight-tile {
+            background: var(--pure-white);
+            border: 1.5px solid var(--card-border-orange);
+            border-radius: 18px;
+            padding: 18px 16px;
+            text-align: center;
+            box-shadow: 0 4px 14px rgba(255, 133, 0, 0.08);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .highlight-tile:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(255, 133, 0, 0.15);
+        }
+
+        .tile-icon-circle {
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            background: var(--light-gold-bg);
+            border: 1.5px solid var(--card-border-orange);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 10px;
+        }
+
+        .highlight-tile h3 {
+            font-size: 14.5px;
+            font-weight: 800;
+            color: var(--navy-blue);
+            margin-bottom: 4px;
+        }
+
+        .highlight-tile p {
+            font-size: 12.5px;
+            color: var(--secondary-text);
+            line-height: 1.45;
+        }
+
+        /* Quick Navigation Bar */
+        .toc-card {
+            background: var(--light-blue-bg);
+            border: 1px solid var(--divider);
+            border-radius: 16px;
+            padding: 14px 18px;
+            margin-bottom: 24px;
+        }
+
+        .toc-title {
+            font-size: 12px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.7px;
+            color: var(--navy-blue);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .toc-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .toc-link {
+            text-decoration: none;
+            font-size: 12.5px;
+            font-weight: 600;
+            color: var(--navy-blue);
+            background: var(--pure-white);
+            border: 1px solid var(--divider);
+            padding: 6px 13px;
+            border-radius: 50px;
+            transition: all 0.18s ease;
+        }
+
+        .toc-link:hover, .toc-link:focus {
+            background: var(--navy-blue);
+            color: var(--pure-white);
+            border-color: var(--navy-blue);
+        }
+
+        /* Policy Section Cards */
+        .policy-card {
+            background: var(--pure-white);
+            border: 1.5px solid var(--divider);
+            border-radius: 20px;
+            padding: 26px 24px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 18px rgba(16, 24, 40, 0.05);
+            position: relative;
+        }
+
+        .policy-card.orange-featured {
+            border: 1.8px solid var(--card-border-orange);
+            box-shadow: 0 6px 20px rgba(255, 153, 0, 0.10);
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 14px;
+            padding-bottom: 12px;
+            border-bottom: 1.5px solid var(--surface-gray);
+        }
+
+        .section-badge {
+            width: 36px;
+            height: 36px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, var(--orange), var(--accent-orange));
+            color: var(--pure-white);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 15px;
+            flex-shrink: 0;
+            box-shadow: 0 3px 8px rgba(255, 133, 0, 0.28);
+        }
+
+        .section-header h2 {
+            font-size: 18.5px;
+            font-weight: 800;
+            color: var(--navy-blue);
+            line-height: 1.3;
+        }
+
+        .policy-card p {
+            font-size: 14.5px;
+            color: var(--main-text);
+            margin-bottom: 12px;
+        }
+
+        .policy-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .feature-list {
+            list-style: none;
+            margin: 12px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .feature-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: 14.5px;
+            color: var(--main-text);
+            background: var(--surface-gray);
+            padding: 11px 14px;
+            border-radius: 12px;
+            border-left: 3.5px solid var(--orange);
+        }
+
+        .bullet-dot {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--orange);
+            color: var(--pure-white);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            font-weight: 800;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        /* Official Source Callout Box */
+        .official-portal-callout {
+            background: var(--light-gold-bg);
+            border: 1.5px solid var(--card-border-orange);
+            border-radius: 14px;
+            padding: 15px 18px;
+            margin-top: 14px;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .official-portal-callout .callout-title {
+            font-size: 13px;
+            font-weight: 800;
+            color: var(--navy-blue);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .official-portal-callout a {
+            color: var(--secondary-blue);
+            font-weight: 800;
+            font-size: 14.5px;
+            text-decoration: none;
+            word-break: break-all;
+        }
+
+        .official-portal-callout a:hover {
+            text-decoration: underline;
+        }
+
+        /* Data Safety Matrix Table */
+        .table-wrapper {
+            overflow-x: auto;
+            margin-top: 14px;
+            border-radius: 14px;
+            border: 1px solid var(--divider);
+        }
+
+        table.safety-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 13.5px;
+        }
+
+        table.safety-table th {
+            background: var(--navy-blue);
+            color: var(--pure-white);
+            font-weight: 700;
+            padding: 12px 14px;
+            white-space: nowrap;
+        }
+
+        table.safety-table td {
+            padding: 11px 14px;
+            border-bottom: 1px solid var(--divider);
+            color: var(--main-text);
+        }
+
+        table.safety-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        table.safety-table tr:nth-child(even) td {
+            background: #F9FAFB;
+        }
+
+        .status-badge-safe {
+            display: inline-block;
+            background: var(--verified-green-bg);
+            color: var(--verified-green);
+            font-weight: 800;
+            font-size: 11.5px;
+            padding: 3px 10px;
+            border-radius: 50px;
+            border: 1px solid rgba(15, 118, 110, 0.25);
+        }
+
+        /* Permissions 2-Column Grid */
+        .permissions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 14px;
+            margin: 14px 0;
+        }
+
+        .perm-box {
+            border: 1.5px solid var(--divider);
+            border-radius: 14px;
+            padding: 15px;
+            background: var(--pure-white);
+        }
+
+        .perm-code {
+            display: inline-block;
+            background: var(--light-blue-bg);
+            color: var(--navy-blue);
+            font-family: monospace;
+            font-size: 12px;
+            font-weight: 700;
+            padding: 3px 9px;
+            border-radius: 6px;
+            margin-bottom: 6px;
+        }
+
+        .perm-box h4 {
+            font-size: 14.5px;
+            font-weight: 800;
+            color: var(--main-text);
+            margin-bottom: 4px;
+        }
+
+        .perm-box p {
+            font-size: 13px;
+            color: var(--secondary-text);
+            margin-bottom: 0;
+        }
+
+        /* Luxury Developer Card (Matches About App Screen) */
+        .developer-card {
+            background: var(--pure-white);
+            border: 2px solid var(--card-border-orange);
+            border-radius: 22px;
+            padding: 28px 22px;
+            text-align: center;
+            margin-top: 26px;
+            box-shadow: 0 8px 24px rgba(255, 133, 0, 0.14);
+        }
+
+        .dev-icon-badge {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            background: var(--light-gold-bg);
+            border: 1.5px solid var(--card-border-orange);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 10px;
+        }
+
+        .developer-card .dev-heading {
+            font-size: 13px;
+            font-weight: 800;
+            color: var(--secondary-text);
+            text-transform: uppercase;
+            letter-spacing: 0.9px;
+            margin-bottom: 6px;
+        }
+
+        .developer-name-row {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--navy-blue);
+            margin-bottom: 8px;
+        }
+
+        .orange-accent-bar {
+            width: 84px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--orange), var(--accent-orange));
+            border-radius: 50px;
+            margin: 0 auto 16px;
+        }
+
+        .dev-meta-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+            gap: 10px;
+            max-width: 680px;
+            margin: 0 auto 16px;
+            text-align: left;
+        }
+
+        .dev-meta-item {
+            background: var(--surface-gray);
+            padding: 10px 14px;
+            border-radius: 12px;
+            font-size: 13px;
+        }
+
+        .dev-meta-item strong {
+            color: var(--navy-blue);
+            display: block;
+            font-size: 11.5px;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+        }
+
+        .dev-meta-item a {
+            color: var(--secondary-blue);
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .helpdesk-note {
+            background: var(--light-gold-bg);
+            border: 1px solid var(--card-border-orange);
+            border-radius: 12px;
+            padding: 12px 16px;
+            font-size: 13px;
+            color: var(--main-text);
+            max-width: 680px;
+            margin: 0 auto;
+        }
+
+        /* Bottom Blue Gradient Pill Footer */
+        .footer-action-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 26px;
+        }
+
+        .footer-pill {
+            flex: 1 1 280px;
+            max-width: 460px;
+            background: linear-gradient(180deg, var(--button-grad-start), var(--button-grad-end));
+            color: var(--pure-white);
+            text-align: center;
+            padding: 14px 24px;
+            border-radius: 50px;
+            font-weight: 800;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+            box-shadow: 0 6px 16px rgba(0, 59, 120, 0.28);
+        }
+
+        .print-btn {
+            background: var(--pure-white);
+            color: var(--navy-blue);
+            border: 1.8px solid var(--navy-blue);
+            padding: 12px 22px;
+            border-radius: 50px;
+            font-weight: 800;
+            font-size: 13.5px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .print-btn:hover {
+            background: var(--navy-blue);
+            color: var(--pure-white);
+        }
+
+        /* Bottom Decorative Wave Footer */
+        .bottom-wave-container {
+            width: 100%;
+            margin-top: 32px;
+            line-height: 0;
+        }
+
+        @media (max-width: 600px) {
+            .hero-header {
+                padding: 28px 16px 38px;
+            }
+            .hero-header h1 {
+                font-size: 22px;
+            }
+            .policy-card {
+                padding: 20px 16px;
+            }
+            .section-header h2 {
+                font-size: 16.5px;
+            }
+            .developer-name-row {
+                font-size: 20px;
+            }
+        }
+
+        @media print {
+            .toc-card, .print-btn, .watermark-chakra {
+                display: none !important;
+            }
+            .policy-card {
+                box-shadow: none;
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Subtle Rotating Ashoka Chakra Watermark -->
+    <svg class="watermark-chakra" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="100" cy="100" r="90" fill="none" stroke="#003B78" stroke-width="6" />
+        <circle cx="100" cy="100" r="18" fill="none" stroke="#003B78" stroke-width="4" />
+        <g stroke="#003B78" stroke-width="2.5">
+            <line x1="100" y1="10" x2="100" y2="190" />
+            <line x1="10" y1="100" x2="190" y2="100" />
+            <line x1="36.36" y1="36.36" x2="163.64" y2="163.64" />
+            <line x1="163.64" y1="36.36" x2="36.36" y2="163.64" />
+            <line x1="76.7" y1="13.06" x2="123.3" y2="186.94" />
+            <line x1="123.3" y1="13.06" x2="76.7" y2="186.94" />
+            <line x1="13.06" y1="76.7" x2="186.94" y2="123.3" />
+            <line x1="13.06" y1="123.3" x2="186.94" y2="76.7" />
+            <line x1="55" y1="22.05" x2="145" y2="177.95" />
+            <line x1="145" y1="22.05" x2="55" y2="177.95" />
+            <line x1="22.05" y1="55" x2="177.95" y2="145" />
+            <line x1="22.05" y1="145" x2="177.95" y2="55" />
+        </g>
+    </svg>
+
+    <!-- Top Navy Blue & Orange Luxury Header -->
+    <header class="hero-header">
+        <div class="hero-inner">
+            <div class="brand-logo-circle" aria-hidden="true">
+                <!-- Orange Bank / Government Pillar Emblem SVG -->
+                <svg width="36" height="36" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 22L32 6L58 22H6Z" fill="#FF8500" />
+                    <rect x="8" y="24" width="48" height="4" rx="2" fill="#003B78" />
+                    <rect x="13" y="30" width="7" height="19" rx="2" fill="#FF8500" />
+                    <rect x="28.5" y="30" width="7" height="19" rx="2" fill="#FF8500" />
+                    <rect x="44" y="30" width="7" height="19" rx="2" fill="#FF8500" />
+                    <rect x="8" y="51" width="48" height="4" rx="2" fill="#003B78" />
+                    <rect x="4" y="56" width="56" height="5" rx="2.5" fill="#FF8500" />
+                </svg>
+            </div>
+            <div class="header-pill-badge">
+                <span>Official Privacy Policy &amp; Data Safety</span>
+            </div>
+            <h1>PFMS – Public Financial Management System</h1>
+            <p class="subtitle">
+                Transparent, Zero-Credential-Storage Privacy Policy for Citizens Using the Independent PFMS Convenience Application
+            </p>
+            <div class="trust-strip">
+                <span class="trust-chip">&#10003; No Login Required</span>
+                <span class="trust-chip">&#10003; Zero OTP / Banking Storage</span>
+                <span class="trust-chip">&#10003; 256-Bit HTTPS Official Portal</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Key Metadata Banner -->
+        <section class="meta-banner" aria-label="Document Metadata">
+            <div class="meta-cell">
+                <span class="meta-label">Application Name</span>
+                <span class="meta-value">PFMS</span>
+            </div>
+            <div class="meta-cell">
+                <span class="meta-label">Developer</span>
+                <span class="meta-value">Anshil Technical</span>
+            </div>
+            <div class="meta-cell">
+                <span class="meta-label">App Version</span>
+                <span class="meta-value">1.0.0 (Production)</span>
+            </div>
+            <div class="meta-cell">
+                <span class="meta-label">Effective &amp; Updated</span>
+                <span class="meta-value">November 7, 2026</span>
+            </div>
+        </section>
+
+        <!-- 4 At-a-Glance Security Pillars -->
+        <section class="highlights-grid" aria-label="Privacy Highlights">
+            <div class="highlight-tile">
+                <div class="tile-icon-circle">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="#FF8500">
+                        <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM9 6c0-1.66 1.34-3 3-3s3 1.34 3 3v2H9V6zm3 11c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"/>
+                    </svg>
+                </div>
+                <h3>Zero Credential Storage</h3>
+                <p>We never collect, log, or store your PFMS login ID, passwords, bank account numbers, or OTPs.</p>
+            </div>
+
+            <div class="highlight-tile">
+                <div class="tile-icon-circle">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="#FF8500">
+                        <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/>
+                    </svg>
+                </div>
+                <h3>Official HTTPS Domain</h3>
+                <p>All DBT and payment checks connect directly to the verified official portal (<code>pfms.gov.in</code>).</p>
+            </div>
+
+            <div class="highlight-tile">
+                <div class="tile-icon-circle">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="#FF8500">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                    </svg>
+                </div>
+                <h3>Least-Privilege Access</h3>
+                <p>No access to your camera, microphone, contacts, SMS, call logs, or GPS location.</p>
+            </div>
+
+            <div class="highlight-tile">
+                <div class="tile-icon-circle">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="#FF8500">
+                        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+                    </svg>
+                </div>
+                <h3>Play Store Compliant</h3>
+                <p>Fully aligned with Google Play Developer Program Policies and User Data Safety standards.</p>
+            </div>
+        </section>
+
+        <!-- Quick Jump Navigation -->
+        <nav class="toc-card" aria-label="Table of Contents">
+            <div class="toc-title">
+                <span>Quick Section Navigation</span>
+            </div>
+            <div class="toc-links">
+                <a class="toc-link" href="#disclaimer">1. Government Disclaimer</a>
+                <a class="toc-link" href="#data-safety">2. Zero Data Collection</a>
+                <a class="toc-link" href="#webview-security">3. In-App Browser Security</a>
+                <a class="toc-link" href="#permissions">4. Device Permissions</a>
+                <a class="toc-link" href="#admob">5. Google AdMob &amp; Consent</a>
+                <a class="toc-link" href="#children-privacy">6. Children's Privacy</a>
+                <a class="toc-link" href="#developer-contact">7. Developer &amp; Contact</a>
+            </div>
+        </nav>
+
+        <!-- Section 1: Non-Affiliation & Government Disclaimer -->
+        <section id="disclaimer" class="policy-card orange-featured">
+            <div class="section-header">
+                <span class="section-badge">!</span>
+                <h2>1. Non-Affiliation &amp; Government Disclaimer</h2>
+            </div>
+            <p>
+                <strong>PFMS – Public Financial Management System</strong> (Package ID: <code>com.aistudio.pfms.anshil</code>) is an independent public-service convenience application developed and maintained by <strong>Anshil Technical</strong>.
+            </p>
+            <p>
+                This application is <strong>NOT</strong> affiliated with, endorsed by, sponsored by, or officially operated by the <strong>Government of India</strong>, the <strong>Ministry of Finance</strong>, the <strong>Office of Controller General of Accounts (CGA)</strong>, or the official Public Financial Management System (PFMS) authority. All official trademarks, emblems, and portal content belong to their respective government owners.
+            </p>
+            <div class="official-portal-callout">
+                <span class="callout-title">Verified Official Government Source</span>
+                <span>All public financial services accessed within this application originate directly from the official PFMS portal:</span>
+                <a href="https://pfms.gov.in/" target="_blank" rel="noopener noreferrer">https://pfms.gov.in/</a>
+            </div>
+        </section>
+
+        <!-- Section 2: Information We Do Not Collect & Data Safety Matrix -->
+        <section id="data-safety" class="policy-card">
+            <div class="section-header">
+                <span class="section-badge">2</span>
+                <h2>2. Information We Do Not Collect (Data Safety Matrix)</h2>
+            </div>
+            <p>
+                You can open and use the PFMS application immediately without creating an account, signing in, or providing any personal profile. We do <strong>not</strong> operate any backend database that harvests or stores user data.
+            </p>
+            <div class="table-wrapper">
+                <table class="safety-table">
+                    <thead>
+                        <tr>
+                            <th>Data Category</th>
+                            <th>Collected by App?</th>
+                            <th>Shared with Third Parties?</th>
+                            <th>How It Is Handled</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Bank Account &amp; IFSC Details</strong></td>
+                            <td><span class="status-badge-safe">NO</span></td>
+                            <td><span class="status-badge-safe">NO</span></td>
+                            <td>Entered directly on official <code>pfms.gov.in</code> HTTPS forms</td>
+                        </tr>
+                        <tr>
+                            <td><strong>PFMS Login IDs &amp; Passwords</strong></td>
+                            <td><span class="status-badge-safe">NO</span></td>
+                            <td><span class="status-badge-safe">NO</span></td>
+                            <td>Never read, cached, or intercepted by this app</td>
+                        </tr>
+                        <tr>
+                            <td><strong>One-Time Passwords (OTPs) &amp; CAPTCHA</strong></td>
+                            <td><span class="status-badge-safe">NO</span></td>
+                            <td><span class="status-badge-safe">NO</span></td>
+                            <td>Validated strictly by the official PFMS server</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Aadhaar / PAN / Beneficiary IDs</strong></td>
+                            <td><span class="status-badge-safe">NO</span></td>
+                            <td><span class="status-badge-safe">NO</span></td>
+                            <td>Transmitted directly over TLS/HTTPS to <code>pfms.gov.in</code></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Contacts, SMS, Call Logs &amp; Location</strong></td>
+                            <td><span class="status-badge-safe">NO</span></td>
+                            <td><span class="status-badge-safe">NO</span></td>
+                            <td>Permissions are never requested or present in the app</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Section 3: Secure In-App Browser Architecture -->
+        <section id="webview-security" class="policy-card">
+            <div class="section-header">
+                <span class="section-badge">3</span>
+                <h2>3. Secure In-App WebView Browsing</h2>
+            </div>
+            <p>
+                When you open services such as <strong>DBT Status Tracker</strong> (<code>https://pfms.gov.in/SitePages/DBT_StatusTracker.aspx</code>) or <strong>Know Your Payment</strong> (<code>https://pfms.gov.in/SitePages/KnowYourPayment_Dw_NewNew.aspx</code>), the app renders the official government webpage inside Android's system WebView with strict security controls:
+            </p>
+            <ul class="feature-list">
+                <li>
+                    <span class="bullet-dot">&#10003;</span>
+                    <div><strong>Strict HTTPS-Only Enforcement:</strong> Cleartext HTTP traffic is disabled (<code>usesCleartextTraffic="false"</code>) and mixed content is blocked.</div>
+                </li>
+                <li>
+                    <span class="bullet-dot">&#10003;</span>
+                    <div><strong>Verified Official Domain Allow-List:</strong> In-app navigation is restricted strictly to verified official PFMS domains (<code>pfms.gov.in</code>) to prevent untrusted external redirects.</div>
+                </li>
+                <li>
+                    <span class="bullet-dot">&#10003;</span>
+                    <div><strong>Standard Session Cookies:</strong> Temporary cookies required by the official PFMS portal for CAPTCHA verification are managed locally by Android's WebView <code>CookieManager</code> and are never exported.</div>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Section 4: Device Permissions -->
+        <section id="permissions" class="policy-card">
+            <div class="section-header">
+                <span class="section-badge">4</span>
+                <h2>4. Android Device Permissions Used</h2>
+            </div>
+            <p>
+                The application requests only two standard, non-invasive install-time network permissions required to connect to the PFMS portal:
+            </p>
+            <div class="permissions-grid">
+                <div class="perm-box">
+                    <span class="perm-code">android.permission.INTERNET</span>
+                    <h4>Internet Connectivity</h4>
+                    <p>Required to load live official PFMS web pages and service portals over secure HTTPS connections.</p>
+                </div>
+                <div class="perm-box">
+                    <span class="perm-code">android.permission.ACCESS_NETWORK_STATE</span>
+                    <h4>Network Status Check</h4>
+                    <p>Used to detect whether Wi-Fi or mobile data is available so the app can display a helpful offline message if disconnected.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Google AdMob & User Messaging Platform (UMP) Consent -->
+        <section id="admob" class="policy-card">
+            <div class="section-header">
+                <span class="section-badge">5</span>
+                <h2>5. Advertising, Google AdMob &amp; User Consent</h2>
+            </div>
+            <p>
+                To support ongoing maintenance as a free public-utility application, this app integrates the official <strong>Google Mobile Ads SDK (Google AdMob)</strong> to display interstitial advertisements at natural navigation breaks between screens.
+            </p>
+            <ul class="feature-list">
+                <li>
+                    <span class="bullet-dot">&#10003;</span>
+                    <div><strong>Non-Intrusive Placement:</strong> Ads are shown only at natural transitions between pages and never interrupt active form filling, CAPTCHA entry, or payment status checks.</div>
+                </li>
+                <li>
+                    <span class="bullet-dot">&#10003;</span>
+                    <div><strong>User Messaging Platform (UMP) Consent:</strong> Where required by regional privacy laws, consent is gathered using Google's official User Messaging Platform before personalized or non-personalized ads are requested.</div>
+                </li>
+                <li>
+                    <span class="bullet-dot">&#10003;</span>
+                    <div><strong>Advertising ID Controls:</strong> Google AdMob may use the standard Android Advertising ID (<code>com.google.android.gms.permission.AD_ID</code>) for frequency capping and fraud prevention. Users can reset or delete their Advertising ID anytime under <em>Android Settings &rarr; Google &rarr; Ads</em>.</div>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Section 6: Children's Privacy & Policy Updates -->
+        <section id="children-privacy" class="policy-card">
+            <div class="section-header">
+                <span class="section-badge">6</span>
+                <h2>6. Children's Privacy &amp; Policy Updates</h2>
+            </div>
+            <p>
+                <strong>Children's Privacy:</strong> This application is designed for general citizens verifying public financial and Direct Benefit Transfer (DBT) records. We do not knowingly solicit or collect any data from children under the age of 13.
+            </p>
+            <p>
+                <strong>Policy Updates:</strong> We may revise this Privacy Policy periodically to reflect security enhancements or Google Play policy updates. The "Effective &amp; Updated" date at the top of this document always indicates the latest revision.
+            </p>
+        </section>
+
+        <!-- Section 7: Developer Information Card -->
+        <section id="developer-contact" class="developer-card">
+            <div class="dev-icon-badge" aria-hidden="true">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="#FF8500">
+                    <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/>
+                </svg>
+            </div>
+            <div class="dev-heading">Developer Information</div>
+            <div class="developer-name-row">
+                <span>Anshil Technical</span>
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="#FF8500" aria-label="Verified Developer">
+                    <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/>
+                </svg>
+            </div>
+            <div class="orange-accent-bar"></div>
+
+            <div class="dev-meta-grid">
+                <div class="dev-meta-item">
+                    <strong>Developer Name</strong>
+                    Anshil Technical
+                </div>
+                <div class="dev-meta-item">
+                    <strong>Application Name</strong>
+                    PFMS – Public Financial Management System
+                </div>
+                <div class="dev-meta-item">
+                    <strong>Developer Support Email</strong>
+                    <a href="mailto:9anshil3@gmail.com">9anshil3@gmail.com</a>
+                </div>
+                <div class="dev-meta-item">
+                    <strong>App Version &amp; Platform</strong>
+                    Version 1.0.0 • Android
+                </div>
+            </div>
+
+            <div class="helpdesk-note">
+                <strong>Official PFMS Portal Helpdesk (For Payment &amp; DBT Queries):</strong><br />
+                Toll-Free Helpline: <strong>1800-118-111</strong> (Mon–Sat, 9:00 AM – 6:00 PM) • Official Portal: <a href="https://pfms.gov.in/" target="_blank" rel="noopener noreferrer" style="color: #003B78; font-weight: 700;">https://pfms.gov.in/</a>
+            </div>
+        </section>
+
+        <!-- Bottom Action Bar -->
+        <div class="footer-action-row">
+            <div class="footer-pill">
+                App Developed for Public Service
+            </div>
+            <button type="button" class="print-btn" onclick="window.print()">
+                Print / Save PDF
+            </button>
         </div>
     </main>
+
+    <!-- Decorative Orange, Yellow & Navy Blue Curved Footer Wave -->
+    <div class="bottom-wave-container" aria-hidden="true">
+        <svg viewBox="0 0 1440 110" width="100%" height="80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0,30 Q720,105 1440,30 L1440,110 L0,110 Z" fill="#FF8500" />
+            <path d="M0,48 Q720,115 1440,48 L1440,110 L0,110 Z" fill="#FFFFFF" />
+            <path d="M0,58 Q720,122 1440,58 L1440,110 L0,110 Z" fill="#003B78" />
+        </svg>
+    </div>
 
 </body>
 </html>
